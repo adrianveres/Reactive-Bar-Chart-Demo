@@ -4,15 +4,18 @@
 
 <body>
   <div id="outer">
+    {{> d3vis}}
     {{> leaderboard}}
   </div>
 </body>
 
 <template name="leaderboard">
   <div class="leaderboard">
+    <div class="players">
     {{#each players}}
       {{> player}}
     {{/each}}
+    </div>
   </div>
 
   {{#if selected_name}}
@@ -25,6 +28,12 @@
   {{#unless selected_name}}
   <div class="none">Click a player to select</div>
   {{/unless}}
+</template>
+
+<template name="d3vis">
+  <div class="d3board" height="150px" width="600px">
+    <svg id="d3vis"></svg>
+  </div>
 </template>
 
 <template name="player">

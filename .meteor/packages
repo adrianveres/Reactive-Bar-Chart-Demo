@@ -5,6 +5,6 @@
 
 autopublish
 insecure
-preserve-inputs
 d3
 underscore
+standard-app-packages
